@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="text-center">
+<h1><%=@restaurants.name%></h1>
+<h2><%=@restaurants.address%></h2>
+<h1><%=@restaurants.category%></h1>
+<h1><%=@restaurants.phone_number%></h1>
+
+
+<%= link_to "Voir les commentaires", restaurant_reviews_path(:restaurant_id), class: "btn btn-primary" %>
+<%= link_to "retour", restaurants_path(@restaurants), class: "btn btn-primary" %>
+</div>
+</div>

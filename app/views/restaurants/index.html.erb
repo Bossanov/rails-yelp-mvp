@@ -1,0 +1,17 @@
+
+  <div class="container">
+    <div class="text-center">
+    <h1>Les restaurants</h1>
+    <%= link_to "Nouveau restaurant", new_restaurant_path(@restaurants), class: "btn btn-primary"%>
+  </div>
+    <div class="row">
+    <% @restaurants.each do |restaurant| %>
+      <div class="card col-xs-4 text-center">
+        <h2><%= restaurant.name %></h2>
+        <p><%= restaurant.address %></p>
+        <%= link_to "Voir ce restaurant", restaurant_path(restaurant), class: "btn btn-primary", method: :get %>
+      </div>
+    <% end %>
+  </div>
+</div>
+‡

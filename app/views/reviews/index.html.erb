@@ -1,0 +1,13 @@
+
+<h1>Commentaires</h1>
+
+
+<%= link_to "Ajouter un commentaire", new_restaurant_review_path(:restaurant_id), class: "btn btn-primary" %>
+<%= link_to "retour", restaurants_path(@restaurants), class: "btn btn-primary" %>
+
+
+<% @reviews.each do |review| %>
+  <h2><%= review.content %></h2>
+  <p>Notes: <%= review.rating %></p>
+<% end %>
+
