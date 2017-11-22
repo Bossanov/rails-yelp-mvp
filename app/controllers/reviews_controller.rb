@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  def index         # GET /tasks
+  def index
     @reviews = Review.all
   end
 
@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
+
   end
 
   private
